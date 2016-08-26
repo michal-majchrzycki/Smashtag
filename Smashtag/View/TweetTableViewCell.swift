@@ -2,8 +2,8 @@
 //  TweetTableViewCell.swift
 //  Smashtag
 //
-//  Created by CS193p Instructor.
-//  Copyright © 2016 Stanford University. All rights reserved.
+//  Created by Neían
+//  Copyright © 2016 Michał Majchrzycki. All rights reserved.
 //
 
 import UIKit
