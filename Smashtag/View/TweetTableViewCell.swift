@@ -34,9 +34,24 @@ class TweetTableViewCell: UITableViewCell
         if let tweet = self.tweet
         {
             tweetTextLabel?.text = tweet.text
+            var tweetText = String()
+            let range = (tweetText as NSString).rangeOfString(tweetText)
+            
             if tweetTextLabel?.text != nil  {
                 for _ in tweet.media {
                     tweetTextLabel.text! += " 📷"
+                }
+                for _ in tweet.hashtags {
+                    let range = ("\(tweet.hashtags)" as NSString).rangeOfString("\(tweet.hashtags)")
+                    let attributedString = NSMutableAttributedString(string:"\(tweet.hashtags)")
+                    attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor(), range: range)
+                    
+                    //Apply to the label
+                    tweetTextLabel.attributedText = attributedString
+                }
+                
+                for _ in tweet.urls {
+                    
                 }
             }
             
@@ -56,7 +71,7 @@ class TweetTableViewCell: UITableViewCell
             }
             tweetCreatedLabel?.text = formatter.stringFromDate(tweet.created)
         }
-
+        
     }
     
 }

@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		908AF5681D704BFD005D083E /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Twitter.framework; sourceTree = "<group>"; };
 		908AF5741D7054CB005D083E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Smashtag/Info.plist; sourceTree = SOURCE_ROOT; };
-		908AF5761D705A15005D083E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Smashtag/images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		908AF5761D705A15005D083E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		908AF5791D705B47005D083E /* twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-icon.png"; sourceTree = "<group>"; };
 		ECB713841CCEE7D200DB951A /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB713871CCEE7D200DB951A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				908AF5791D705B47005D083E /* twitter-icon.png */,
+				908AF5761D705A15005D083E /* Default-568h@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 		ECB7137B1CCEE7D200DB951A = {
 			isa = PBXGroup;
 			children = (
-				908AF5761D705A15005D083E /* Default-568h@2x.png */,
 				908AF5681D704BFD005D083E /* Twitter.framework */,
 				ECB713861CCEE7D200DB951A /* Smashtag */,
 				ECB713851CCEE7D200DB951A /* Products */,
