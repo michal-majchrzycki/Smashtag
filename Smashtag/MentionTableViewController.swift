@@ -11,7 +11,6 @@ import UIKit
 class MentionTableViewController: UIViewController {
     
     @IBOutlet weak var mentionTableView: UITableView!
-    
     var tweet: Tweet? {
         didSet {
             if let tweet = tweet {
@@ -71,11 +70,11 @@ class MentionTableViewController: UIViewController {
             switch self {
             
             case .Hashtag(_):
-                return "Hashtags"
+                return "Hasztagi"
             case .URL(_):
-                return "URLs"
+                return "Linki URL"
             case .UserMention(_):
-                return "Users"
+                return "Użytkownicy"
             }
         }
     }
@@ -84,17 +83,13 @@ class MentionTableViewController: UIViewController {
         static let TextCellIdentifier  = "TextCell"
     }
     
-//    private struct Constants {
-//        static let GoldenRatio = (1 + sqrt(5.0))/2
-//    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
-     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let mention = mentions[indexPath.section][indexPath.row]
         switch mention {
         default:
@@ -104,19 +99,19 @@ class MentionTableViewController: UIViewController {
     
     // MARK: - UITableViewDatasource
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return mentions.count
     }
     
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mentions[section].count
     }
     
-     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return mentions[section].first!.type
     }
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let mention = mentions[indexPath.section][indexPath.row]
         
         switch mention {
@@ -128,7 +123,7 @@ class MentionTableViewController: UIViewController {
     }
     
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if let indexPath = mentionTableView.indexPathForSelectedRow {
             let mention = mentions[indexPath.section][indexPath.row]
             switch mention {

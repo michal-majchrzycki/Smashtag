@@ -109,10 +109,14 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate
         return cell
     }
     
-    // MARK: - Navigation
-    
-    @IBAction func goBack(segue: UIStoryboardSegue) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Storyboard.ShowMentionSegue {
+            if let mvc = segue.destinationViewController as? MentionTableViewController {
+                if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+                    mvc.tweet = tweets[indexPathForSelectedRow.section][indexPathForSelectedRow.row]
+                }
+            }
+        }
     }
-    
     
 }

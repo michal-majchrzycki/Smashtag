@@ -88,7 +88,7 @@
                                     <outlet property="tweetProfileImageView" destination="snM-sf-v7z" id="3nC-Ub-cNI"/>
                                     <outlet property="tweetScreenNameLabel" destination="e6s-x9-nDW" id="hIv-cc-Icb"/>
                                     <outlet property="tweetTextLabel" destination="P1p-nq-x1q" id="qqD-Ah-bJE"/>
-                                    <segue destination="FON-An-rNc" kind="show" id="Sro-8I-mSc"/>
+                                    <segue destination="FON-An-rNc" kind="show" identifier="Show Mention Seugue" id="Sro-8I-mSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -125,6 +125,7 @@
         <!--Mention Table View Controller-->
         <scene sceneID="yIU-Ex-FYh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMF-oB-Jmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FON-An-rNc" customClass="MentionTableViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zur-Dk-HdL"/>
@@ -173,10 +174,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mentionTableView" destination="fpQ-1x-ad3" id="hTx-vw-WGI"/>
+                        <outlet property="mentionTableView" destination="fpQ-1x-ad3" id="0nC-xj-gcy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vMF-oB-Jmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781" y="265"/>
         </scene>
