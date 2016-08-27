@@ -88,6 +88,7 @@
                                     <outlet property="tweetProfileImageView" destination="snM-sf-v7z" id="3nC-Ub-cNI"/>
                                     <outlet property="tweetScreenNameLabel" destination="e6s-x9-nDW" id="hIv-cc-Icb"/>
                                     <outlet property="tweetTextLabel" destination="P1p-nq-x1q" id="qqD-Ah-bJE"/>
+                                    <segue destination="FON-An-rNc" kind="show" id="Sro-8I-mSc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -120,6 +121,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJc-3T-BNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042" y="265"/>
+        </scene>
+        <!--Mention Table View Controller-->
+        <scene sceneID="yIU-Ex-FYh">
+            <objects>
+                <viewController id="FON-An-rNc" customClass="MentionTableViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zur-Dk-HdL"/>
+                        <viewControllerLayoutGuide type="bottom" id="1di-6Z-LgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pix-EV-dsE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fpQ-1x-ad3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="CbJ-pS-sxM" customClass="MentionTextCell" customModule="Smashtag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CbJ-pS-sxM" id="GaX-0V-qPk">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRC-7n-Sqx">
+                                                    <rect key="frame" x="14" y="11" width="256" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mentionLabel" destination="ZRC-7n-Sqx" id="1HH-xL-4AQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FON-An-rNc" id="jJV-3U-Jc2"/>
+                                    <outlet property="delegate" destination="FON-An-rNc" id="55U-w9-H9i"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fpQ-1x-ad3" firstAttribute="top" secondItem="zur-Dk-HdL" secondAttribute="bottom" id="MGM-il-MYY"/>
+                            <constraint firstItem="fpQ-1x-ad3" firstAttribute="bottom" secondItem="1di-6Z-LgA" secondAttribute="top" id="Syn-Ct-nfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="fpQ-1x-ad3" secondAttribute="trailing" id="Wfy-Jh-SnE"/>
+                            <constraint firstItem="fpQ-1x-ad3" firstAttribute="leading" secondItem="Pix-EV-dsE" secondAttribute="leading" id="lWY-5p-lmm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mentionTableView" destination="fpQ-1x-ad3" id="hTx-vw-WGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMF-oB-Jmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wd5-L1-fYW">
