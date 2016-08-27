@@ -16,6 +16,7 @@
 		909325081D71C7DE0047A511 /* twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 909325071D71C7DE0047A511 /* twitter-icon.png */; };
 		9093250A1D71CDFD0047A511 /* MentionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909325091D71CDFD0047A511 /* MentionTableViewController.swift */; };
 		9093250C1D71CEC80047A511 /* MentionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093250B1D71CEC80047A511 /* MentionTextCell.swift */; };
+		9093250E1D71E56E0047A511 /* MentionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093250D1D71E56E0047A511 /* MentionImageCell.swift */; };
 		ECB713881CCEE7D200DB951A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB713871CCEE7D200DB951A /* AppDelegate.swift */; };
 		ECB7138D1CCEE7D200DB951A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB7138B1CCEE7D200DB951A /* Main.storyboard */; };
 		ECB7138F1CCEE7D200DB951A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB7138E1CCEE7D200DB951A /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		909325071D71C7DE0047A511 /* twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-icon.png"; path = "images/twitter-icon.png"; sourceTree = "<group>"; };
 		909325091D71CDFD0047A511 /* MentionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTableViewController.swift; sourceTree = "<group>"; };
 		9093250B1D71CEC80047A511 /* MentionTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTextCell.swift; sourceTree = "<group>"; };
+		9093250D1D71E56E0047A511 /* MentionImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionImageCell.swift; sourceTree = "<group>"; };
 		ECB713841CCEE7D200DB951A /* Smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB713871CCEE7D200DB951A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB7138C1CCEE7D200DB951A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				ECB7139E1CCEEE5B00DB951A /* TweetTableViewCell.swift */,
 				9093250B1D71CEC80047A511 /* MentionTextCell.swift */,
+				9093250D1D71E56E0047A511 /* MentionImageCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				909324FA1D71C08D0047A511 /* TwitterRequest.swift in Sources */,
 				9093250A1D71CDFD0047A511 /* MentionTableViewController.swift in Sources */,
 				9093250C1D71CEC80047A511 /* MentionTextCell.swift in Sources */,
+				9093250E1D71E56E0047A511 /* MentionImageCell.swift in Sources */,
 				909324FB1D71C08D0047A511 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,6 +31,13 @@ class MentionTableViewController: UIViewController {
                     }
                     addMentions(urls)
                 }
+                if tweet.media.count > 0 {
+                    var mediaItems = [Mention]()
+                    for mediaItem in tweet.media {
+                        mediaItems.append(Mention.Image(mediaItem))
+                    }
+                    addMentions(mediaItems)
+                }
                 
                 var userMentions = [Mention]()
                 userMentions.append(Mention.UserMention("@\(tweet.user.screenName)"))
@@ -53,6 +60,7 @@ class MentionTableViewController: UIViewController {
         case Hashtag(String)
         case URL(String)
         case UserMention(String)
+        case Image(MediaItem)
         
         var description: String {
             switch self {
@@ -63,6 +71,8 @@ class MentionTableViewController: UIViewController {
                 return url
             case .UserMention(let userMention):
                 return userMention
+            case .Image(let mediaItem):
+                return mediaItem.url.absoluteString
             }
         }
         
@@ -75,12 +85,16 @@ class MentionTableViewController: UIViewController {
                 return "Linki URL"
             case .UserMention(_):
                 return "Użytkownicy"
+            case .Image(_):
+                return "Grafiki"
             }
         }
     }
     
     private struct Storyboard {
         static let TextCellIdentifier  = "TextCell"
+        static let ImageCellIdentifier = "ImageCell"
+        static let ShowImageSegue = "ShowImage"
     }
     
     
@@ -115,8 +129,12 @@ class MentionTableViewController: UIViewController {
         let mention = mentions[indexPath.section][indexPath.row]
         
         switch mention {
+        case .Image(let mediaItem):
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.ImageCellIdentifier, forIndexPath: indexPath) as! MentionImageCell
+            cell.mediaItem = mediaItem
+            return cell
         default:
-            let cell = mentionTableView.dequeueReusableCellWithIdentifier("TextCell", forIndexPath: indexPath) as! MentionTextCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.TextCellIdentifier, forIndexPath: indexPath) as! MentionTextCell
             cell.mention = mention.description
             return cell
         }

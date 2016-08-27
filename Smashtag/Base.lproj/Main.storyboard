@@ -146,16 +146,46 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRC-7n-Sqx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRC-7n-Sqx">
                                                     <rect key="frame" x="14" y="11" width="256" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="256" id="gqF-Ca-Di2"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZRC-7n-Sqx" firstAttribute="top" secondItem="GaX-0V-qPk" secondAttribute="topMargin" constant="3" id="G7r-GK-7O1"/>
+                                                <constraint firstItem="ZRC-7n-Sqx" firstAttribute="leading" secondItem="GaX-0V-qPk" secondAttribute="leadingMargin" constant="6" id="j7W-bH-8L2"/>
+                                                <constraint firstItem="ZRC-7n-Sqx" firstAttribute="centerY" secondItem="GaX-0V-qPk" secondAttribute="centerY" id="s29-uI-PYv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mentionLabel" destination="ZRC-7n-Sqx" id="1HH-xL-4AQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" rowHeight="300" id="egv-JS-7XM" customClass="MentionImageCell" customModule="Smashtag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="egv-JS-7XM" id="eIw-sb-8yW">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3UO-1B-WDd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3UO-1B-WDd" firstAttribute="centerY" secondItem="eIw-sb-8yW" secondAttribute="centerY" id="7yC-2r-OCA"/>
+                                                <constraint firstItem="3UO-1B-WDd" firstAttribute="top" secondItem="eIw-sb-8yW" secondAttribute="top" id="AIP-P1-fbU"/>
+                                                <constraint firstItem="3UO-1B-WDd" firstAttribute="leading" secondItem="eIw-sb-8yW" secondAttribute="leading" id="LiE-dN-utE"/>
+                                                <constraint firstAttribute="trailing" secondItem="3UO-1B-WDd" secondAttribute="trailing" id="goy-kC-Oq7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mentionImageView" destination="3UO-1B-WDd" id="hep-lq-dYr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
