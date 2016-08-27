@@ -186,6 +186,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mentionImageView" destination="3UO-1B-WDd" id="hep-lq-dYr"/>
+                                            <segue destination="NMa-AA-aAc" kind="show" id="EbM-NG-yHS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -209,6 +210,51 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1781" y="265"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="qVY-ZD-Xvl">
+            <objects>
+                <viewController id="NMa-AA-aAc" customClass="ImageViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CZj-dE-ToO"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdy-tI-m6S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tlB-XE-uCe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfh-KH-jQo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-71-Za8">
+                                        <rect key="frame" x="282" y="250" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bNU-71-Za8" secondAttribute="trailing" constant="281" id="IlG-rx-QBS"/>
+                                    <constraint firstItem="bNU-71-Za8" firstAttribute="centerX" secondItem="dfh-KH-jQo" secondAttribute="centerX" id="PJd-5B-u52"/>
+                                    <constraint firstAttribute="bottom" secondItem="bNU-71-Za8" secondAttribute="bottom" constant="185" id="PR1-1u-kVl"/>
+                                    <constraint firstItem="bNU-71-Za8" firstAttribute="centerY" secondItem="dfh-KH-jQo" secondAttribute="centerY" id="SJO-eb-5UC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfh-KH-jQo" firstAttribute="leading" secondItem="tlB-XE-uCe" secondAttribute="leading" id="DDH-zD-jxr"/>
+                            <constraint firstItem="dfh-KH-jQo" firstAttribute="bottom" secondItem="xdy-tI-m6S" secondAttribute="top" id="jtx-pZ-r6K"/>
+                            <constraint firstAttribute="trailing" secondItem="dfh-KH-jQo" secondAttribute="trailing" id="s8O-Vn-rVg"/>
+                            <constraint firstItem="dfh-KH-jQo" firstAttribute="top" secondItem="CZj-dE-ToO" secondAttribute="bottom" id="y0l-Nb-QiF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="dfh-KH-jQo" id="FWg-D9-wze"/>
+                        <outlet property="spinner" destination="bNU-71-Za8" id="ebk-eW-Xfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CE-VH-4ZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2490" y="265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wd5-L1-fYW">
